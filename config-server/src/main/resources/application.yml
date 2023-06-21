@@ -10,8 +10,15 @@ spring:
       server:
         git:
           uri: https://github.com/elena-fly17/Spring_Cloud_Bus_Repo
-          search-paths: application.yml
+          search-paths: "application.yml"
+        default-label: main
 eureka:
   client:
     service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

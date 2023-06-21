@@ -1,9 +1,9 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
-    name: client_one
+    name: client_two
   profiles:
     active: git
   cloud:
@@ -33,16 +33,3 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-    enabled: true
-    register-with-eureka: true
-    fetch-registry: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh, bus-env
